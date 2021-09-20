@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import AppBar from '@material-ui/core/AppBar';
+import Drawer from '@material-ui/core/Drawer';
 import Toolbar from '@material-ui/core/Toolbar';
 import MenuIcon from '@material-ui/icons/Menu';
 import List from '@material-ui/core/List';
@@ -143,6 +144,7 @@ export default function PersistentDrawerLeft(props) {
                     {[{ name: 'About Me', route: '/about' },
                     { name: 'Projects', route: '/projects' },
                     { name: 'Resume', route: '/resume' },
+                    { name: 'Contact Me', route: '/contact' },
                     ].map((text, index) => (
                         <ListItem component={Link} key={index} to={text.route}>
                             <ListItemIcon>{index % 2 === 0 ? <InfoIcon /> : <CodeIcon />}</ListItemIcon>

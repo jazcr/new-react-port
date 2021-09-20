@@ -8,8 +8,7 @@ import headShot from '../Assets/picture.jpg';
 
 const useStyles = makeStyles((theme) => ({
     font: {
-        fontFamily: 'Nunito, Georgia, cursive, sans-serif',
-        color: 'whitesmoke',
+        color: 'white',
         padding: '5px',
         margin: '1%',
         lineHeight: '22px',
@@ -20,13 +19,13 @@ const useStyles = makeStyles((theme) => ({
 export default function FullWidthGrid() {
     const classes = useStyles();
     return (
-        <Box class="min-vh-100" sx={{ flexGrow: 1 }}>
-            <Grid class="d-flex justify-content-center">
-                <img src={headShot} alt="Resume" />
+        <Box className="min-vh-100" height="100vh" sx={{ flexGrow: 1 }}>
+            <Grid className="d-flex justify-content-center">
+                <img src={headShot} height="200px" alt="Resume" />
             </Grid>
-            <Grid class="d-flex justify-content-center" container spacing={2}>
+            <Grid className="d-flex flex-column justify-content-center" container spacing={2}>
                 <Container id="about-me">
-                    <h1 class="m-1">
+                    <h1 className="m-1">
                         About Me
                     </h1>
                     <Typography className={classes.font} margin={2} variant="body1" gutterBottom>
@@ -34,9 +33,9 @@ export default function FullWidthGrid() {
                     </Typography>
                 </Container>
             </Grid>
-            <Grid class="d-flex justify-content-center" container spacing={2}>
+            <Grid className="d-flex justify-content-center" container spacing={2}>
                 <Container id="about-me">
-                    <h1 class="m-1">
+                    <h1 className="m-1">
                         Skills
                     </h1>
                     <Typography className={classes.font} margin={2} variant="body1" gutterBottom>
@@ -44,13 +43,13 @@ export default function FullWidthGrid() {
                     </Typography>
                 </Container>
             </Grid>
-            <Grid class="d-flex justify-content-center" container spacing={2}>
+            <Grid className="d-flex justify-content-center" container spacing={2}>
                 <Container id="about-me">
-                    <h1 class="m-1">
+                    <h1 className="m-1">
                         Education
                     </h1>
                     <Typography className={classes.font} margin={2} variant="body1" gutterBottom>
-                        Fullstack WebDevelopment Bootcamp Certificate - Universit of Denver 2021
+                        Fullstack WebDevelopment Bootcamp Certificate - University of Denver 2021
                         Associates of Arts - Front Range Community College 2018
                     </Typography>
                 </Container>
