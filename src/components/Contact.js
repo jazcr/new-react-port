@@ -1,112 +1,64 @@
+
+
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import Box from '@mui/material/Box';
-import Grid from '@mui/material/Grid';
-import TextField from '@mui/material/TextField';
-import Button from '@mui/material/Button'
+import validate from './validateInfo';
+import useForm from './useForm';
+import './Form.css';
 
-const useStyles = makeStyles((theme) => ({
-    root: {
-        display: 'flex',
-    },
-    fields: {
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-    },
-    fieldColor: {
-        backgroundColor: 'rgb(165, 165, 165)'
-    },
-    header: {
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        color: 'whitesmoke'
-    },
-    button: {
-        backgroundColor: 'midnightblue',
-        color:'whitesmoke',
-        padding: '10px 15px',
-        fontSize: '15px',
-        borderRadius: '15px'
-    }
-}));
-
-export default function MultilineTextFields() {
-    const classes = useStyles();
-    const [setValue] = React.useState('Controlled');
-
-    const handleChange = (event) => {
-        setValue(event.target.value);
-    };
+const Contact = ({ submitForm }) => {
+    const { handleChange, handleSubmit, values, errors } = useForm(
+        submitForm,
+        validate
+    );
 
     return (
-        <Grid class="min-vh-100">
-            <h1 className={classes.header}>Contact Me</h1>
-            <Box
-                className={classes.fields}
-                component="form"
-                sx={{
-                    '& .MuiTextField-root': { m: 1, width: '100ch' },
-                }}
-                noValidate
-                autoComplete="off"
-            >
-                <div>
-                    <TextField
-                        className={classes.fieldColor}
-                        id="filled-textarea"
-                        label="Name"
-                        placeholder="Name"
-                        multiline
-                        variant="filled"
+        <div className='d-flex' id="formPage">
+            <form onSubmit={handleSubmit} className='form' noValidate>
+                <h1>
+                    Contact Me! 
+                </h1>
+                <div className='form-inputs'>
+                    <label className='form-label'>Name</label>
+                    <input
+                        className='form-input'
+                        type='text'
+                        name='name'
+                        placeholder='Enter your name'
+                        value={values.name}
+                        onChange={handleChange}
                     />
+                    {errors.name && <p>{errors.name}</p>}
                 </div>
-            </Box>
-            <Box
-                className={classes.fields}
-                component="form"
-                sx={{
-                    '& .MuiTextField-root': { m: 1, width: '100ch' },
-                }}
-                noValidate
-                autoComplete="off"
-            >
-                <div>
-                    <TextField
-                        className={classes.fieldColor}
-                        id="filled-textarea"
-                        label="Email Address"
-                        placeholder="Email"
-                        multiline
-                        variant="filled"
+                <div className='form-inputs'>
+                    <label className='form-label'>Email</label>
+                    <input
+                        className='form-input'
+                        type='email'
+                        name='email'
+                        placeholder='Enter your email'
+                        value={values.email}
+                        onChange={handleChange}
                     />
+                    {errors.email && <p>{errors.email}</p>}
                 </div>
-            </Box>
-            <Box
-                className={classes.fields}
-                component="form"
-                sx={{
-                    '& .MuiTextField-root': { m: 1, width: '100ch' },
-                }}
-                noValidate
-                autoComplete="off"
-            >
-                <div>
-                    <TextField
-                        className={classes.fieldColor}
-                        id="filled-multiline-static"
-                        label="Message"
-                        multiline
-                        rows={4}
-                        placeholder="Please provide a brief description of your project."
-                        variant="filled"
+                <div className='form-inputs'>
+                    <label className='form-label'>Message</label>
+                    <input
+                        className='form-input'
+                        type='text'
+                        name='message'
+                        placeholder='Your message here (:'
+                        value={values.message}
+                        onChange={handleChange}
                     />
+                    {errors.message && <p>{errors.message}</p>}
                 </div>
-            </Box>
-            <Grid class="d-flex justify-content-center align-items-center">
-                <Button variant="contained" className={classes.button}>Submit</Button>
-            </Grid>
-        </Grid>
+                <button className='form-input-btn' type='submit'>
+                    Submit
+                </button>
+            </form>
+        </div>
     );
-}
+};
+
+export default Contact;

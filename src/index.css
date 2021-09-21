@@ -7,6 +7,11 @@
   --ltgrey: rgb(207, 207, 207);
 }
 
+#root {
+  background-color: rgb(165, 165, 165);
+
+}
+
 * {
   box-sizing: border-box;
 }
@@ -18,7 +23,7 @@ body {
 }
 
 #main {
-  background: rgb(175, 157, 180);
+  background: rgb(202, 183, 173);
 }
 
 #vb-css {
@@ -39,20 +44,31 @@ h1 {
 }
 
 #about-me {
-  background-color: var(--dkpurple);
+  background-color: rgba(77, 75, 74, 0.212);
   color: var(--wtsmoke);
   padding: 15px;
   margin: 2%;
-  font-family: Nunito, Georgia, cursive, sans-serif;
   line-height: 22px;
   font-size: 1.40rem;
 }
 
 .email{
-  color: var(--wtsmoke);
+  color: white;
 }
 
 .email:hover{
   color: var(--ltpurple);
 }
 
+#resume {
+  width: 60%;
+  height: auto;
+}
+
+.resBtn {
+  background: linear-gradient(
+    90deg,
+    rgb(197, 189, 178) 0%,
+    rgb(0, 0, 0) 100%
+  );
+}

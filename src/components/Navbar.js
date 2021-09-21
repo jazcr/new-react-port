@@ -18,7 +18,7 @@ import CodeIcon from '@material-ui/icons/Code';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import InfoIcon from '@material-ui/icons/Info';
-import HomeIcon from '@mui/icons-material/Home';
+import FreeBreakfast from '@mui/icons-material/FreeBreakfast';
 
 
 const drawerWidth = 220;
@@ -33,7 +33,7 @@ const useStyles = makeStyles((theme) => ({
             easing: theme.transitions.easing.sharp,
             duration: theme.transitions.duration.leavingScreen,
         }),
-        backgroundColor: 'rgb(33, 2, 42)'
+        backgroundColor: 'rgb(207, 198, 202)'
     },
     appBarShift: {
         width: `calc(100% - ${drawerWidth}px)`,
@@ -56,7 +56,7 @@ const useStyles = makeStyles((theme) => ({
     },
     drawerPaper: {
         width: drawerWidth,
-        backgroundColor: 'rgb(190, 172, 195)'
+        backgroundColor: 'rgba(179, 164, 156, 0.986)'
     },
     drawerHeader: {
         display: 'flex',
@@ -66,7 +66,7 @@ const useStyles = makeStyles((theme) => ({
         justifyContent: 'flex-end',
     },
     fontColor: {
-        color: 'midnightblue',
+        color: 'white',
     },
     content: {
         flexGrow: 1,
@@ -105,11 +105,11 @@ export default function PersistentDrawerLeft(props) {
                 position="fixed"
                 className={clsx(classes.appBar, {
                     [classes.appBarShift]: open,
-                })} style={{ backgroundColor: '#9999' }}
+                })} style={{ backgroundColor: 'rgba(77, 75, 74, 0.212)' }}
             >
                 <Toolbar>
                     <IconButton
-                        color="inherit"
+                        color="rgba(77, 75, 74, 0.212)"
                         aria-label="open drawer"
                         onClick={handleDrawerOpen}
                         edge="start"
@@ -118,10 +118,10 @@ export default function PersistentDrawerLeft(props) {
                         <MenuIcon />
                     </IconButton>
                     <Typography variant="h6" noWrap>
-                        <Link to="/">
-                            <HomeIcon className={classes.menuButton} />
-                        </Link>
                         Jasmine Rudolph
+                        <Link to="/">
+                            <FreeBreakfast className={classes.menuButton} />
+                        </Link>
                     </Typography>
                 </Toolbar>
             </AppBar>
@@ -140,7 +140,7 @@ export default function PersistentDrawerLeft(props) {
                     </IconButton>
                 </div>
                 <Divider />
-                <List >
+                <List onClick={handleDrawerClose}>
                     {[{ name: 'About Me', route: '/about' },
                     { name: 'Projects', route: '/projects' },
                     { name: 'Resume', route: '/resume' },

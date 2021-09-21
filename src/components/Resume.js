@@ -11,11 +11,11 @@ export default function ResumePage() {
     };
 
     return (
-        <div className="min-vh-100 d-flex flex-column justify-content-center">
-            <Button className="mb-2" onClick={onDownload} variant="contained" color="primary">
+        <div className="d-flex flex-column justify-content-center align-items-center">
+            <Button className="resBtn my-2" onClick={onDownload} variant="contained" color="primary">
                 Download My Resume!
             </Button>
-            <img src={resume} maxHeight="100px" alt="Resume"/>
+            <img src={resume} id="resume" alt="Resume"/>
         </div>
     );
 }

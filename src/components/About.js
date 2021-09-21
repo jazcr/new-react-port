@@ -19,11 +19,11 @@ const useStyles = makeStyles((theme) => ({
 export default function FullWidthGrid() {
     const classes = useStyles();
     return (
-        <Box className="min-vh-100" height="100vh" sx={{ flexGrow: 1 }}>
+        <Box className="min-vh-100 container-fluid" height="100vh" sx={{ flexGrow: 1 }}>
             <Grid className="d-flex justify-content-center">
                 <img src={headShot} height="200px" alt="Resume" />
             </Grid>
-            <Grid className="d-flex flex-column justify-content-center" container spacing={2}>
+            <Grid className="d-flex justify-content-center" container spacing={2}>
                 <Container id="about-me">
                     <h1 className="m-1">
                         About Me
