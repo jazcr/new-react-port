@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/new-react-port/static/css/main.416f8ee7.chunk.css",
+    "main.js": "/new-react-port/static/js/main.79dc44f0.chunk.js",
+    "main.js.map": "/new-react-port/static/js/main.79dc44f0.chunk.js.map",
+    "runtime-main.js": "/new-react-port/static/js/runtime-main.0f3a8d9e.js",
+    "runtime-main.js.map": "/new-react-port/static/js/runtime-main.0f3a8d9e.js.map",
+    "static/js/2.cb44ce31.chunk.js": "/new-react-port/static/js/2.cb44ce31.chunk.js",
+    "static/js/2.cb44ce31.chunk.js.map": "/new-react-port/static/js/2.cb44ce31.chunk.js.map",
+    "static/js/3.97e4f52d.chunk.js": "/new-react-port/static/js/3.97e4f52d.chunk.js",
+    "static/js/3.97e4f52d.chunk.js.map": "/new-react-port/static/js/3.97e4f52d.chunk.js.map",
+    "index.html": "/new-react-port/index.html",
+    "static/css/main.416f8ee7.chunk.css.map": "/new-react-port/static/css/main.416f8ee7.chunk.css.map",
+    "static/js/2.cb44ce31.chunk.js.LICENSE.txt": "/new-react-port/static/js/2.cb44ce31.chunk.js.LICENSE.txt",
+    "static/media/comp.9decca57.jpg": "/new-react-port/static/media/comp.9decca57.jpg",
+    "static/media/picture.3c612bb6.jpg": "/new-react-port/static/media/picture.3c612bb6.jpg",
+    "static/media/res.6b79b05f.jpg": "/new-react-port/static/media/res.6b79b05f.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0f3a8d9e.js",
+    "static/js/2.cb44ce31.chunk.js",
+    "static/css/main.416f8ee7.chunk.css",
+    "static/js/main.79dc44f0.chunk.js"
+  ]
+}
